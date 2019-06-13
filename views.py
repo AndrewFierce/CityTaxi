@@ -21,17 +21,8 @@ def sentinfo(request):
 		sts = request.POST.get('sts', '')
 		licence = request.POST.get('licence', '')
 		addinfo = request.POST.get('addinfo', '')
-		email = "radugaug@mail.ru"
-		print(fio)
-		print(tel)
-		print(driver)
-		print(passport)
-		print(auto)
-		print(sts)
-		print(licence)
-		print(addinfo)
-		print(email)
-		# send_mail('Driver form', 'Фамилия Имя Отчество: '+fio+'.\n Телефон: '+tel+'.\n Водительское улостоверение: '+driver+'.\n Паспорт: '+passport+'.\n Автомобиль: '+auto+'.\n Серия и номер СТС: '+sts+'.\n Номер лицензии, если есть: '+licence+'.\n Дополнительные сведения: '+addinfo, None, [email], fail_silently=False)
+		email = "YOUREMAIL"
+		send_mail('Driver form', 'Фамилия Имя Отчество: '+fio+'.\n Телефон: '+tel+'.\n Водительское улостоверение: '+driver+'.\n Паспорт: '+passport+'.\n Автомобиль: '+auto+'.\n Серия и номер СТС: '+sts+'.\n Номер лицензии, если есть: '+licence+'.\n Дополнительные сведения: '+addinfo, None, [email], fail_silently=False)
 		return redirect('index')
 	else:
 		return redirect('index')
